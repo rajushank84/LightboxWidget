@@ -14,6 +14,11 @@
         .hidden {
             display: none;
         }
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +38,7 @@
 
 
 
-            <a href="#" id="close1">Close</a>
+            <a href="#" id="close1"class='close'>X</a>
         </div>
 
         <div id="mydiv2">
@@ -41,7 +46,7 @@
 
             <img src="https://www.petfinder.com/wp-content/uploads/2012/11/99059361-choose-cat-litter-632x475.jpg" style="width: 50%;" alt="Cat" />
 
-            <a href="#" id="close2">Close</a>
+            <a href="#" id="close2"class='close'>X</a>
         </div>
     </div>
 
@@ -49,7 +54,7 @@
     <script>
         var l1 = new Utils.Lightbox("#mydiv1");
         var l2 = new Utils.Lightbox(document.getElementById("mydiv2"));
-        var l3 = new Utils.Lightbox("Element created on the fly. <a href='#' id='close3' onclick='close3()'>Close</a>");
+        var l3 = new Utils.Lightbox("Element created on the fly. <a href='#' id='close3' onclick='close3()'class='close'>X</a>");
 
         document.getElementById("close1").addEventListener("click", function () {
             l1.hide();
